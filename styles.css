@@ -1,0 +1,324 @@
+body{
+  padding: 25px;
+}
+.title {
+	color: #5C6AC4;
+}
+/* --- Global Styles & Variables --- */
+:root {
+    --primary-color: #005f73;
+    --secondary-color: #0a9396;
+    --accent-color: #94d2bd;
+    --light-gray: #f8f9fa;
+    --dark-gray: #343a40;
+    --text-color: #495057;
+    --white: #ffffff;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    background-color: var(--light-gray);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+    color: var(--dark-gray);
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.section-subtitle {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px auto;
+    font-size: 1.1rem;
+}
+
+section {
+    padding: 80px 0;
+}
+
+/* --- Header & Navigation --- */
+header {
+    background: var(--white);
+    color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+header .logo h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 2rem;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+/* --- Hero Section --- */
+#hero {
+    background: linear-gradient(rgba(0, 95, 115, 0.8), rgba(0, 95, 115, 0.8)), url('https://images.unsplash.com/photo-1549289218-6c8491c772e2?q=80&w=2070&auto=format&fit=crop') center center/cover no-repeat;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    padding-top: 60px; /* Header offset */
+}
+
+#hero .hero-content {
+    max-width: 800px;
+}
+
+#hero h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+
+#hero .project-date {
+    background: var(--accent-color);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+/* --- Overview Section --- */
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.overview-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.overview-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.overview-card i {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.overview-card h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+/* --- Methodology Section (Timeline) --- */
+#methodology {
+    background: var(--white);
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    background: var(--accent-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1.5px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-icon {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: var(--white);
+    border: 3px solid var(--secondary-color);
+    border-radius: 50%;
+    top: 30px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+.timeline-item:nth-child(odd) .timeline-icon {
+    right: -25px;
+}
+.timeline-item:nth-child(even) .timeline-icon {
+    left: -25px;
+}
+
+
+.timeline-content {
+    padding: 20px 30px;
+    background: var(--light-gray);
+    border-radius: 8px;
+    position: relative;
+}
+.timeline-item:nth-child(odd) .timeline-content {
+    text-align: right;
+}
+
+.timeline-content h3 {
+    color: var(--primary-color);
+}
+
+/* --- Results / Chart Section --- */
+.chart-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.chart-wrapper {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+.chart-wrapper h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+/* --- Technology Stack --- */
+#tech {
+    background: var(--white);
+}
+
+.tech-stack-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.tech-icon {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.tech-icon i {
+    font-size: 4rem;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.tech-icon:hover i {
+    transform: scale(1.1);
+    color: var(--primary-color);
+}
+
+/* --- Footer --- */
+footer {
+    background: var(--dark-gray);
+    color: var(--light-gray);
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    h2 { font-size: 2rem; }
+    
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    header .logo { margin-bottom: 10px; }
+    header nav ul li { margin: 0 0.75rem; }
+
+    #hero { height: auto; padding: 120px 20px 60px; }
+    #hero h2 { font-size: 2.5rem; }
+
+    .timeline::after { left: 25px; }
+    .timeline-item { width: 100%; padding-left: 70px; padding-right: 15px; }
+    .timeline-item:nth-child(odd), .timeline-item:nth-child(even) { left: 0; }
+    .timeline-item:nth-child(odd) .timeline-content, .timeline-item:nth-child(even) .timeline-content { text-align: left; }
+    .timeline-icon { left: 0; }
+}
