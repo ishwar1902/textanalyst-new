@@ -1,0 +1,1 @@
+A data-driven textile analytics project focused on sustainability, using global test data, statistical models, and 3D simulations to enhance fabric quality, reduce design variability by, and promote eco-conscious material choices. Built with Python, R, SQL, Tableau, and 3D CAD.
